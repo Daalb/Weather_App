@@ -1,0 +1,14 @@
+@import '../../scss/index.scss';
+
+.login{
+    background-color: $background-default;
+    
+    &__content{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin-top: 30px;
+        background-color: $background-default;
+    }
+}

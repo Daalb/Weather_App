@@ -36,7 +36,7 @@ const routes = [
                 exact: true
             },
             {
-                path: "/app/Fav",
+                path: "/app/fav",
                 component: Fav,
                 exact: true
             },
