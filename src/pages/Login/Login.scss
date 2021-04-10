@@ -1,5 +1,6 @@
 @import '../../scss/index.scss';
 
+
 .login{
     background-color: $background-default;
     
@@ -8,7 +9,6 @@
         flex-direction: column;
         align-items: center;
         min-height: 100vh;
-        margin-top: 30px;
         background-color: $background-default;
     }
 }
