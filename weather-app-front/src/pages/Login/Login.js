@@ -1,8 +1,10 @@
 //Liberias
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import {Button} from 'antd';
 import GoogleLogin from 'react-google-login';
 
+//API
+import {addUserApi} from '../../api/user';
 
 //Estilos
 import './Login.scss';
@@ -11,6 +13,12 @@ import './Login.scss';
 import Logo from'../../assets/icons8-rain-100.png';
 
 export default function Login(){
+  const [data,setData] = useState({
+    name: "",
+    email: "",
+    idGoogle: "",
+    defaultCountry: "Colombia"
+  });
 
   const responseGoogle = (response) => {
     console.log(response.profileObj);
