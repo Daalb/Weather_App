@@ -7,7 +7,7 @@ const{ API_VERSION,IP_SERVER,PORT_DB } = require("./config");
 mongoose.set("useFindAndModify", false);
 
 //Conexión a la BD
-mongoose.connect(`mongodb://${IP_SERVER}:${PORT_DB}/partnersBD`,
+mongoose.connect(`mongodb://${IP_SERVER}:${PORT_DB}/weatherBD`,
 {useNewUrlParser: true,useUnifiedTopology: true},(err,res)=>{
     if(err){
         throw err;
