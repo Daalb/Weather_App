@@ -1,18 +1,24 @@
 //Liberias
 import React from 'react';
-import {Layout,Button} from 'antd'
+import {Button} from 'antd'
 
 //Estilos
 import './Login.scss';
 
+//Asets
+import Logo from'../../assets/icons8-rain-100.png';
+
 export default function Login(){
-    const {Content} = Layout;
+  
     return(
-       <Layout className="login">
-           <Content className="login__content">
-                <h1>Ingresar</h1>
-                <Button type="primary">Ingresar con cuenta de Google</Button>    
-           </Content>
-       </Layout>
+      <div className="login">
+          <div className="login__content">
+            <h1>Ingresar</h1>
+            <img src={Logo} alt="logo weather-app"/>
+            <Button type="primary">
+                Ingresa con tu cuenta de Google
+            </Button>
+          </div>
+      </div>
     );
 }
