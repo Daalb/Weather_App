@@ -5,6 +5,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 //Configuracion de las rutas
 import routes from './config/routes';
 
+
+
  
 //La app se envuelve en la configuracion de las rutas
 export default function App() {
