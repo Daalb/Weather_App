@@ -1,5 +1,8 @@
 //Liberias
 import React,{useState,useEffect,createContext} from 'react';
+import jwtDecode from 'jwt-decode';
+
+//Funciones
 import {getAccessTokenApi,logout} from '../api/auth';
 
 export const AuthContext = createContext();
@@ -30,7 +33,7 @@ function checkUserLogin(setUser){
     }else{//Si es valido
         setUser({
             isLoading: false,
-            user: accessToken
+            user: jwtDecode(accessToken)
         });
     }
 }

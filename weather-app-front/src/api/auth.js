@@ -22,7 +22,6 @@ function willExpireToken(token){
     const metaToken = jwtDecode(token);
     const { exp } = metaToken;
     const now = (Date.now() + seconds) / 1000;//Pasar a milisegundos
-    console.log(metaToken);
    //const expCaducado = exp - 10000000
     
     return now > exp;  //True expirado - False no expirado 

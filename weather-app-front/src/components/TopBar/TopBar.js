@@ -4,6 +4,9 @@ import {Button} from 'antd';
 import {Link} from 'react-router-dom';
 import { MenuUnfoldOutlined,PoweroffOutlined,MenuFoldOutlined } from '@ant-design/icons';
 
+//Api
+import {logout} from '../../api/auth';
+
 //Assets
 import Logo from '../../assets/icons8-rain-100.png';
 
@@ -12,6 +15,10 @@ import './TopBar.scss';
 
 export default function TopBar(props){
     const {menuCollapsed, setMenuCollapsed} = props;
+    const logoutUser = ()=>{
+        logout();
+        window.location.reload();
+    }
     return(
         <div className="topbar">
             <div className="topbar__left">
@@ -26,7 +33,7 @@ export default function TopBar(props){
                 </Button>
             </div>
             <div className="topbar__right">
-                <Button type="link">
+                <Button type="link" onClick={logoutUser}>
                     <PoweroffOutlined />
                 </Button>
             </div>
