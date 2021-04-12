@@ -13,7 +13,7 @@ function addUser(req,res){
     
     User.findOne({"idGoogle":Aa},(err,person) => {
         if(err){
-            console.log("Error");
+            res.status(500).send({message: "Error del servidor"})
         }else if(!person){
             user.save((err,userStored) =>{
                 if(err){
