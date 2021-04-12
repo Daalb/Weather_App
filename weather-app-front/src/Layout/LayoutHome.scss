@@ -1,6 +1,6 @@
 @import '../scss/index.scss';
 
-.layout-app{
+.layout{
     transition: margin-left 0.2s;
 
     &__header{
@@ -15,7 +15,7 @@
     }
 
     &__content{
-        min-height: calc(100vh - 65px);
+        min-height: calc(100vh - 65px) !important;
         padding: 90px 25px 25px 25px;
 
     }

@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import {Layout, Menu} from 'antd';
 import {HomeOutlined, SearchOutlined ,HeartOutlined , MenuOutlined, FundOutlined }  from '@ant-design/icons';
 
-//Esitlos
+//Estilos
 import './SideBar.scss';
 
 function SideBar(props){

@@ -15,14 +15,12 @@ export default function TopBar(props){
     return(
         <div className="topbar">
             <div className="topbar__left">
-                <Link to = "/app">
                     <img 
                         className="topbar__left-logo"
                         src={Logo}
                         alt="Logo weather app"
                         
                     />
-                </Link>
                 <Button type="link" onClick={() => setMenuCollapsed(!menuCollapsed)}>
                     {menuCollapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined/>}
                 </Button>

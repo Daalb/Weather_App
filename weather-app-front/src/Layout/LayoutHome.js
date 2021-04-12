@@ -18,15 +18,15 @@ export default function LayoutHome(props){
     return(
        <Layout>
            <SideBar menuCollapsed ={menuCollapsed}/>
-           <Layout className="layout-app" style={{ marginLeft: menuCollapsed ? "80px" : "200px"}}>
-                <Header className="layout-app__header">
+           <Layout className="layout" style={{ marginLeft: menuCollapsed ? "80px" : "200px"}}>
+                <Header className="layout__header">
                     <TopBar menuCollapsed ={menuCollapsed} 
                     setMenuCollapsed = {setMenuCollapsed}/>
                 </Header>
-                <Content className="layout-app__content">
+                <Content className="layout__content">
                     <LoadRoutes routes={routes}/>
                 </Content>
-                <Footer style={{ textAlign: 'center' }}  className="layout-app__footer">
+                <Footer style={{ textAlign: 'center' }}  className="layout__footer">
                     Weather App
                 </Footer>
             </Layout>
