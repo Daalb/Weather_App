@@ -5,6 +5,7 @@ const{ API_VERSION,IP_SERVER,PORT_DB } = require("./config");
 
 
 mongoose.set("useFindAndModify", false);
+mongoose.set('useCreateIndex', true);
 
 //Conexión a la BD
 mongoose.connect(`mongodb://${IP_SERVER}:${PORT_DB}/weatherBD`,

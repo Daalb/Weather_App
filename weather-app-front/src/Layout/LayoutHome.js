@@ -1,27 +1,35 @@
 //Librerias
-import React from 'react';
+import React,{useState} from 'react';
 import {Layout} from 'antd';
 import {Route, Switch} from 'react-router-dom';
 
+//Componentes
+import TopBar from '../components/TopBar';
+import SideBar from '../components/SideBar';
 //Estilos
 import './LayoutHome.scss';
 
 export default function LayoutHome(props){
-    console.log(props);
     const {routes} = props;
     const {Header,Content,Footer} = Layout;
+    const [menuCollapsed, setMenuCollapsed] = useState(false);
+
 
     return(
        <Layout>
-           <Header>
-               Cabecera
-           </Header>
-           <Content>
-               <LoadRoutes routes={routes}/>
-           </Content>
-           <Footer>
-               Footer
-           </Footer>
+           <SideBar menuCollapsed ={menuCollapsed}/>
+           <Layout className="layout-app" style={{ marginLeft: menuCollapsed ? "80px" : "200px"}}>
+                <Header className="layout-app__header">
+                    <TopBar menuCollapsed ={menuCollapsed} 
+                    setMenuCollapsed = {setMenuCollapsed}/>
+                </Header>
+                <Content className="layout-app__content">
+                    <LoadRoutes routes={routes}/>
+                </Content>
+                <Footer style={{ textAlign: 'center' }}  className="layout-app__footer">
+                    Weather App
+                </Footer>
+            </Layout>
        </Layout>
     );
 }
