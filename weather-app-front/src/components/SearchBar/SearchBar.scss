@@ -1,0 +1,18 @@
+@import '../../scss/index.scss';
+
+.search-bar{
+
+    display: flex;
+    
+    &__input{
+        display:flex;
+        width: 45%;
+        margin: 20px 10px 2px 1px;    
+        height: 30px;
+    }
+  
+    &__button{
+        margin: 20px 10px 2px 1px;
+        height: 30px;
+    }
+}

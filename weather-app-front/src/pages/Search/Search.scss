@@ -1,0 +1,10 @@
+@import '../../scss/index.scss';
+
+.layout-search{
+
+    &__header{
+        background-color: rgb(210, 238, 229);
+        border-radius: 10px;
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+    }
+}
