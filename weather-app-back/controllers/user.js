@@ -36,8 +36,24 @@ function addUser(req,res){
 }
 
 
+function getDefaultCity(req,res){
+    const query = req.query;
+    User.find({ idGoogle: query.idGoogle }).then((user,err) =>{
+        if(err){
+            res.status(500).send({message: "Error del servidor"})
+        }else{
+            if(!user){
+                res.status(404).send({message:"Usuario no encontrado"})
+            }else{
+                res.status(200).send({user})
+            }
+        }
+    }); 
+
+}
 
 //Exportando funciones
 module.exports = {
-    addUser
-};
+    addUser,
+    getDefaultCity
+}

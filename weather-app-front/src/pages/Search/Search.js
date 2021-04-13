@@ -8,6 +8,10 @@ import { CompassOutlined, GlobalOutlined, SearchOutlined  } from '@ant-design/ic
 //import SearchBar from '../../components/SearchBar';
 import CountryInfo from '../../components/CountryInfo';
 
+//Funciones-Hooks
+import useAuth from '../../hooks/useAuth';
+
+
 //Api
 import {getCurrentWeather} from '../../api/weather';
 
@@ -15,6 +19,7 @@ import {getCurrentWeather} from '../../api/weather';
 import './Search.scss';
 
 export default function Search(){
+    const {user} = useAuth();   
     const {Header,Content} = Layout;
     const [results,setResults] = useState({
         city:"",
@@ -31,7 +36,6 @@ export default function Search(){
     });
 
 
-
     const changeForm = e => {
         setInputs({...inputs,[e.target.name]:e.target.value});
     }
@@ -44,6 +48,8 @@ export default function Search(){
             city:"",
             country:""
         });
+
+       
     }
 
     const search = async e => {
@@ -56,8 +62,7 @@ export default function Search(){
             temperature:result.main.temp,
             wind: result.wind.speed
         })
-        console.log(result);
-        resetForm();
+        // resetForm();
     }
    
 
@@ -104,6 +109,7 @@ export default function Search(){
                         humidity={results.humidity}
                         temperature={results.temperature}
                         wind={results.wind}
+                        user={user.sub}
                     
                     />
                 </Content>

@@ -4,11 +4,12 @@ const Schema = mongoose.Schema;
 
 //Modelo Favoritos
 const FavsSchema = Schema({
-    googleId: {
+    idGoogle: {
         type: String,
         unique: true
     },
-    favList:[String]
+    favList:[String],
+    defaultCountry: String
 });
 
 module.exports = mongoose.model("Favs",FavsSchema);
