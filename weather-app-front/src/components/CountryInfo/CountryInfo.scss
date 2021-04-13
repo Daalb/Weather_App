@@ -4,9 +4,8 @@
     padding: 100px 10px;
    
     &__container{
-        // margin: 10px;
         
-        &__details{
+        &__details.inter{
             background-color: rgb(211, 207, 207);
             transition: all 0.5s;
             padding: 5px;
@@ -22,5 +21,13 @@
             background-color: rgba(0,0,0,0.3);
             cursor: pointer;
         }
+    }
+}
+
+.button-fav{
+    background-color: #d3cfcf;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+    button{
+        background-color: #d3cfcf;
     }
 }

@@ -1,7 +1,6 @@
 import { keyApiWeather,apiWeatherUrl} from './config';
 
 export function getCurrentWeather(data){
-    console.log(data);
     const {city,country} = data;
     const url = `${apiWeatherUrl}${city},${country}&appid=${keyApiWeather}&units=metric`;
    
@@ -16,4 +15,9 @@ export function getCurrentWeather(data){
         return err;
     })
 
+}
+
+
+export function addCityFav(){
+    console.log();
 }
