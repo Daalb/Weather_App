@@ -50,7 +50,7 @@ export default function Search(){
         const result = await getCurrentWeather(inputs);
         setResults({
             city: result.name,
-            country:result.sys.name,
+            country: result.sys.country,
             description:result.weather[0].description,
             humidity:result.main.humidity,
             temperature:result.main.temp,

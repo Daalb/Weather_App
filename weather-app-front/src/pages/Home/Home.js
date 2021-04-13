@@ -1,6 +1,10 @@
 //Liberias
 import React from 'react';
 
+
+//Api
+import {getCurrentWeather} from '../../api/weather';
+
 //Estilos
 import './Home.scss';
 
